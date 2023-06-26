@@ -1,0 +1,11 @@
+{
+  "name": "formation-js",
+  "version": "1.0.0",
+  "description": "Formation JS",
+  "scripts": {
+    "start": "npx lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
