@@ -1,0 +1,65 @@
+#header-name{
+color:tomato;
+font-weight: bolder;
+font-size: xx-large;
+text-shadow: 20px 20px 25px grey;
+text-decoration: underline grey;
+padding-left : 10px;
+}
+
+#dot{
+color:black;
+}
+
+#js{
+color:skyblue;
+font-style: italic;
+}
+
+footer{
+    text-align: center;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+article{
+    flex-grow: 1;
+}
+
+#editor{
+    display:flex;
+}
+
+#editor-viewer{
+    flex-grow: 1;
+}
+
+#editor-viewer{
+    height:100%;
+    width:100%;
+}
+
+#editor-form{
+    text-align: center;
+}
+
+.flex-col{
+    display: flex;
+    align-content:center;
+}
+
+.flex-col>*{
+    text-align: center;
+}
+
+input[type="number"]{
+    width: 100px;
+}
+
+.center{
+    text-align: center;
+}

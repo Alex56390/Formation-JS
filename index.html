@@ -5,12 +5,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formation JS</title>
     <link rel="stylesheet" href="/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
     <!-- Commentaire -->
   </head>
   <body>
-    <header>Projet JS</header>
-    <nav>Navigation</nav>
-    <article>Contenu</article>
+    <header>
+      <div id="header-name">
+        Mario<span id="dot">.</span><span id="js">JS</span>
+      </div>
+      <div id="theme">Theme</div>
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" aria-current="page"
+                >Home <span class="visually-hidden">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Dropdown</a
+              >
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="#">Action 1</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0">
+            <input
+              class="form-control me-sm-2"
+              type="text"
+              placeholder="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <article>
+      <div id="editor">
+        <div id="editor-viewer">
+          <svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <image xlink:href="https://th.bing.com/th/id/OIP.ZCC36jW2Iz6pAC1JvTtqbwHaIM?pid=ImgDet&rs=1" x="0" y="0"/>
+          <text x="20" y="60">GAGNÉ</text>
+        </svg>
+        </div>
+        <div id="editor-form">
+          <form action="#" name="meme-form">
+            <h2>Titre</h2>
+            <input type="text" name="titre" id="meme-titre" />
+            <hr />
+            <label for=""><h2>Image</h2></label>
+            <select name="ImageId" id="Meme-image">
+              <option value="-1">Aucune image</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+            <br />
+            <br />
+            <h2>Texte</h2>
+            <input placeholder="Saisir le texte" type="text" name="text" id="meme-texte" />
+            <div class="flex-col">
+              <div>
+                <label for="meme-x">x</label><br />
+                <input placeholder="X" type="number" name="x" id="meme-x" />
+              </div>
+              <div>
+                <label for="meme-y">y</label>
+                <input placeholder="Y" type="number" name="y" id="meme-y" />
+              </div>
+            </div>
+            <br />
+            <hr />
+            <div class="Décoration">
+              <h2>Décoration</h2>
+              <div id="couleur">
+                <input placeholder="Couleur" type="text" /><br />
+              </div>
+              <br />
+              <h4>Police</h4>
+              <div>
+                <select name="PoliceId" id="Meme-police">
+                  <option value="-1">Aucune Police</option>
+                  <option>Arial</option>
+                  <option>Arial-Black</option>
+                  <option>Calibri</option>
+                </select>
+              </div>
+              <div id="TaillePolice">
+                <input placeholder="Taille de la police" type="Texte" /><br />
+              </div>
+            </div>
+            <div>
+              <select name="PoliceStyle" id="Meme-police-style">
+                <option value="-1">Aucun style</option>
+                <option type="Checkbox"> Gras</option>
+                <option>Italique</option>
+                <option>Souligné</option>
+              </select>
+            </div>
+            <br /> <hr />
+            <div class="center">
+              <input
+                class="btn btn-danger"
+                type="reset"
+                id="meme-reset"
+                value="Annuler"
+              />
+              <button class="btn btn-primary" type="submit" id="meme-submit">
+                Valider
+              </button>
+            </div>
+ 
+          </form>
+        </div>
+      </div>
+    </article>
     <footer>Le Brun &copy; 2023</footer>
   </body>
 </html>
