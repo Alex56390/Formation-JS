@@ -10,6 +10,7 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <!-- Commentaire -->
+    <script src="/js/index.js"></script>
   </head>
   <body>
     <header>
@@ -75,10 +76,21 @@
     <article>
       <div id="editor">
         <div id="editor-viewer">
-          <svg width="100%" height="100%" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <image xlink:href="https://th.bing.com/th/id/OIP.ZCC36jW2Iz6pAC1JvTtqbwHaIM?pid=ImgDet&rs=1" x="0" y="0"/>
-          <text x="20" y="60">GAGNÉ</text>
-        </svg>
+          <svg
+            width="100%"
+            height="100%"
+            viewBox="0 0 500 500"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <image
+              xlink:href="https://th.bing.com/th/id/OIP.ZCC36jW2Iz6pAC1JvTtqbwHaIM?pid=ImgDet&rs=1"
+              x="0"
+              y="0"
+            />
+            <text x="20" y="60">GAGNÉ</text>
+          </svg>
         </div>
         <div id="editor-form">
           <form action="#" name="meme-form">
@@ -95,7 +107,12 @@
             <br />
             <br />
             <h2>Texte</h2>
-            <input placeholder="Saisir le texte" type="text" name="text" id="meme-texte" />
+            <input
+              placeholder="Saisir le texte"
+              type="text"
+              name="text"
+              id="meme-texte"
+            />
             <div class="flex-col">
               <div>
                 <label for="meme-x">x</label><br />
@@ -130,12 +147,13 @@
             <div>
               <select name="PoliceStyle" id="Meme-police-style">
                 <option value="-1">Aucun style</option>
-                <option type="Checkbox"> Gras</option>
+                <option type="Checkbox">Gras</option>
                 <option>Italique</option>
                 <option>Souligné</option>
               </select>
             </div>
-            <br /> <hr />
+            <br />
+            <hr />
             <div class="center">
               <input
                 class="btn btn-danger"
@@ -147,7 +165,6 @@
                 Valider
               </button>
             </div>
- 
           </form>
         </div>
       </div>
