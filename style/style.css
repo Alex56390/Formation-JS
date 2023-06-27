@@ -1,3 +1,8 @@
+header{
+    display: flex;
+    padding-bottom: 10px;
+}
+
 #header-name{
 color:tomato;
 font-weight: bolder;
@@ -5,6 +10,12 @@ font-size: xx-large;
 text-shadow: 20px 20px 25px grey;
 text-decoration: underline grey;
 padding-left : 10px;
+flex-grow: 1;
+}
+
+body.dark{
+    background-color: rgb(25,25,25) !important;
+    color:white !important;
 }
 
 #dot{
@@ -24,6 +35,11 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+#Texte{
+    background-color:blue;
+    font-weight: 900;
 }
 
 article{
