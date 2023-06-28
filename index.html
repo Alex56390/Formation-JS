@@ -10,10 +10,7 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.css"
     />
     <!-- Commentaire -->
-    <script src="/js/Values.js"></script>
-    <script src="/js/Meme.js"></script>
-    <script src="/js/memeform.js"></script>
-    <script src="/js/index.js"></script>
+    <script src="/js/index.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -27,7 +24,7 @@
     </header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="/">Home</a>
         <button
           class="navbar-toggler d-lg-none"
           type="button"
@@ -42,118 +39,23 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav me-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href="#" aria-current="page"
-                >Home <span class="visually-hidden">(current)</span></a
+              <a class="nav-link active" href="/thumbnail" aria-current="page"
+                >Thumbnail <span class="visually-hidden">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="/editor">New Meme</a>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdownId"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Dropdown</a
-              >
-              <div class="dropdown-menu" aria-labelledby="dropdownId">
-                <a class="dropdown-item" href="#">Action 1</a>
-                <a class="dropdown-item" href="#">Action 2</a>
-              </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/break">Template not exist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/azertyuiop">404</a>
             </li>
           </ul>
-          <form class="d-flex my-2 my-lg-0">
-            <input
-              class="form-control me-sm-2"
-              type="text"
-              placeholder="Search"
-            />
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
-
-    <article>
-      <div id="editor">
-        <div id="editor-viewer">
-          <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 500 500"
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-          >
-            <image
-              xlink:href="https://th.bing.com/th/id/OIP.ZCC36jW2Iz6pAC1JvTtqbwHaIM?pid=ImgDet&rs=1"
-              x="0"
-              y="0"
-            />
-            <text x="20" y="60" id="Texte" font-style="italic" font-weight="900" style="text-decoration:underline;fill:black">GAGNÉ</text>
-          </svg>
-        </div>
-        <div id="editor-form">
-          <form action="#" name="meme-form">
-            <h2>Titre</h2>
-            <input type="text" name="titre" id="meme-titre" placeholder="Saisir un titre ..." />
-            <hr/>
-            <label for=""><h2>Image</h2></label>
-            <select name="imageId" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option value="-1">Aucune image</option>
-            <hr />
-            <h2>Texte</h2>
-            <input
-              placeholder="Saisir le texte"
-              type="text"
-              name="text"
-              id="meme-texte"
-            />
-            <div class="flex-col">
-              <div>
-                <label for="meme-x">x</label><br />
-                <input placeholder="X" type="number" name="x" id="meme-x" />
-              </div>
-              <div>
-                <label for="meme-y">y</label>
-                <input placeholder="Y" type="number" name="y" id="meme-y" />
-              </div>
-            </div>
-            <br />
-            <hr />
-            <div class="Décoration">
-              <h2>Décoration</h2>
-              <div id="color">
-                Couleur : <input type="color" name="color" /><br />
-              </div>
-              <br />
-              <h4>Police</h4>
-              <div id="fontWeight">
-                <input placeholder="Taille" type="number" name="fontSize" /><br />
-              </div>
-            </div>
-            <br />
-            <hr />
-            <div class="center">
-              <input
-                class="btn btn-danger"
-                type="reset"
-                id="meme-reset"
-                value="Annuler"
-              />
-              <button class="btn btn-primary" type="submit" id="meme-submit">
-                Valider
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </article>
     <footer>Le Brun &copy; 2023</footer>
   </body>
 </html>
