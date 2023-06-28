@@ -4,6 +4,7 @@ var uneVariableLambda;
  * @returns(undefined) aucun retour
  */
 function init() {
+    initMemeEditor();
   document
     .querySelector("#theme-switch")
     .addEventListener("change", function (evt) {

@@ -79,3 +79,7 @@ input[type="number"]{
 .center{
     text-align: center;
 }
+
+h2{
+    text-decoration: underline ;
+}
