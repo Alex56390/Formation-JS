@@ -1,3 +1,4 @@
+import { initHome } from "/js/js-views/home.js";
 /**
  * variable de config des toues
  */
@@ -11,11 +12,7 @@ const routeConfig = {
     },
     {
       path: "/",
-      initialisation: () => {
-        document.querySelector("#home button").addEventListener("click", () => {
-          alert("c'est gagné");
-        });
-      },
+      initialisation: initHome,
       templateUrl: "/view/home.html",
     },
     {
@@ -23,6 +20,11 @@ const routeConfig = {
       initialisation: undefined,
       templateUrl: "/view/templateQuiExistePasSurLeServeur.html",
     },
+    {
+        path:"/editor",
+        initialisation:undefined,
+        templateUrl:"/view/editor.html"
+    }
   ],
 };
 
@@ -34,6 +36,11 @@ class Router {
   #currentRoute;
   get currentRoute() {
     return this.#currentRoute;
+  }
+  constructor(){
+    document.addEventListener('DOMContentLoaded',(evt)=>{
+        this.#initRouterLinks();
+    })
   }
   /**
    * manage la route en cours
@@ -51,7 +58,10 @@ class Router {
    * Navigate to
    * @param {string} pathName chemin commençant par /
    */
-  changeRoute(pathName) {}
+  changeRoute(pathName) {
+    history.pushState(undefined,undefined,pathName);
+    this.handleRoute();
+  }
   #instaciateCurrentRouteTemplate() {
     if (undefined !== this.#currentRoute.templateText) {
       this.#loadCurrentDOMContent();
@@ -70,10 +80,22 @@ class Router {
   #loadCurrentDOMContent(domContainerSelector = "article") {
     document.querySelector(domContainerSelector).innerHTML =
       this.#currentRoute.templateText;
+      this.#initRouterLinks(domContainerSelector);
     if (undefined !== this.#currentRoute.initialisation) {
       this.#currentRoute.initialisation();
     }
   }
+  #initRouterLinks(baseSelector='body'){
+    const links=document.querySelectorAll(baseSelector+' a');
+    links.forEach(link =>{
+        link.removeEventListener("click",this.handleLinkEvent);
+        link.addEventListener("click",this.#handleLinkEvent);
+    });
+}
+#handleLinkEvent=(evt)=> {
+evt.preventDefault();
+this.changeRoute(evt.target.href)
+}
 }
 export const router = new Router();
 // router.handleRoute();
