@@ -1,3 +1,4 @@
+import { initEditor } from "./js-views/editor.js";
 import { initHome } from "/js/js-views/home.js";
 /**
  * variable de config des toues
@@ -22,7 +23,7 @@ const routeConfig = {
     },
     {
         path:"/editor",
-        initialisation:undefined,
+        initialisation:initEditor,
         templateUrl:"/view/editor.html"
     }
   ],
