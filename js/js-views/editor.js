@@ -1,5 +1,6 @@
 import { Meme } from "../Métier/Meme.js";
 import { ressource } from "../Métier/Ressources.js";
+import { router } from "../router.js";
 let currentMeme;
 let currentImage;
 const VIEW_EDITOR_CSS_SELECTOR = "#editor";
@@ -17,6 +18,13 @@ export const initEditor = () => {
 };
 const initFormEvent = () => {
   var form = document.forms["meme-form"];
+  form.addEventListener('submit',(evt)=>{
+    evt.preventDefault();
+    currentMeme.save((memeSaved=>{
+        ressource.memes.push(memeSaved);
+        router.changeRoute('/thumbnail');
+    }));
+  })
   form["titre"].addEventListener("input", function (evt) {
     currentMeme.titre = evt.target.value;
     // Meme.render(currentMeme,VIEW_EDITOR_CSS_SELECTOR,currentImage);
@@ -51,13 +59,13 @@ const initFormEvent = () => {
 };
 const initFormValues = () => {
     const form=document.forms['meme-form'];
-    form["titre"].value=current.titre;
-    form["text"].value=current.text;
-    form["x"].value=current.x;
-    form["y"].value=current.u;
-    form["imageId"].value=current.imageId;
-    form["fontSize"].value=current.fontSize;
-    form["color"].value=current.color;
+    form["titre"].value=currentMeme.titre;
+    form["text"].value=currentMeme.text;
+    form["x"].value=currentMeme.x;
+    form["y"].value=currentMeme.u;
+    form["imageId"].value=currentMeme.imageId;
+    form["fontSize"].value=currentMeme.fontSize;
+    form["color"].value=currentMeme.color;
 };
 const setCurrentMeme = (meme) => {
   currentMeme = meme;
